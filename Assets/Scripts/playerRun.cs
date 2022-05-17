@@ -27,7 +27,7 @@ public class playerRun : MonoBehaviour
          
             if (Input.GetKey(KeyCode.W))
             {
-                moveDir = new Vector3(gameObject.transform.localPosition.x, gameObject.transform.localPosition.y, 0.25f * speed * Time.deltaTime) ;
+                moveDir = new Vector3(gameObject.transform.localPosition.x, gameObject.transform.localPosition.y, 1 * speed * Time.deltaTime) ;
                 anim.SetInteger("run", 1);
                 gameObject.transform.position = moveDir;
             }
