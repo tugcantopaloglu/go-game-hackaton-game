@@ -119,6 +119,7 @@ public class PlayerMovementInputController : MonoBehaviour
             followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
         }
     }
+    
 
 
 }
