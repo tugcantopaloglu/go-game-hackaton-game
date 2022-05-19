@@ -42,7 +42,7 @@ public class PlayerMovementInputController : MonoBehaviour
 
     public GameObject followTransform;
 
-    private void FixedUpdate()
+    private void Update()
     {
         #region Player Based Rotation
         
@@ -107,6 +107,7 @@ public class PlayerMovementInputController : MonoBehaviour
         //reset the y rotation of the look transform
         followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
     }
+    
 
 
 }
