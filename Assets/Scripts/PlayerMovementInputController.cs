@@ -22,7 +22,7 @@ public class PlayerMovementInputController : MonoBehaviour
     public float rotationLerp = 0.5f;
 
     public float speed = 0.5f;
-    public Camera camera;
+    public Camera playerCamera;
 
     private void Awake()
     {
