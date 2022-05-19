@@ -45,7 +45,7 @@ public class PlayerMovementInputController : MonoBehaviour
 
     public GameObject followTransform;
 
-    private void FixedUpdate()
+    private void Update()
     {
 
         //check if player is standing
