@@ -42,7 +42,7 @@ public class PlayerMovementInputController : MonoBehaviour
 
     public GameObject followTransform;
 
-    private void Update()
+    private void FixedUpdate()
     {
         #region Player Based Rotation
         
