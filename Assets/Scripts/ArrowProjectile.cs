@@ -5,17 +5,17 @@ using UnityEngine;
 public class ArrowProjectile : MonoBehaviour
 {
     public float force;
-    public Rigidbody rigidbody;
+    public Rigidbody rigidbodyArrow;
     Cinemachine.CinemachineImpulseSource source;
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
-        rigidbody.centerOfMass = transform.position;
+        rigidbodyArrow = GetComponent<Rigidbody>();
+        rigidbodyArrow.centerOfMass = transform.position;
     }
 
     public void Fire()
     {
-        rigidbody.AddForce(transform.forward * (100 * Random.Range(1.3f, 1.7f)), ForceMode.Impulse);
+        rigidbodyArrow.AddForce(transform.forward * (100 * Random.Range(1.3f, 1.7f)), ForceMode.Impulse);
         source = GetComponent<Cinemachine.CinemachineImpulseSource>();
 
         source.GenerateImpulse(Camera.main.transform.forward);
@@ -25,7 +25,7 @@ public class ArrowProjectile : MonoBehaviour
     {
         if (collision.gameObject.name != "Player")
         {
-            rigidbody.isKinematic = true;
+            rigidbodyArrow.isKinematic = true;
             StartCoroutine(Countdown());
         }
     }
