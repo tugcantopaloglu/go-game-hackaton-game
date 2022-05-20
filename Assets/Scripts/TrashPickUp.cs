@@ -40,13 +40,11 @@ public class TrashPickUp : MonoBehaviour
         {
             mIsKneel = true;
             TriggerItem();
-            playerInputController.canMove = true;
         }
     }
 
     public void TriggerItem()
     {
-        playerInputController.canMove = false;
         _otherAnimator.Play("kneel");
         parentObject.SetActive(false);
 
