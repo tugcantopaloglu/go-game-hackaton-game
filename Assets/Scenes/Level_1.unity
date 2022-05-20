@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.1
+  m_FogDensity: 0
   m_LinearFogStart: 0
   m_LinearFogEnd: 200
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -5774,6 +5774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: crate
       objectReference: {fileID: 0}
+    - target: {fileID: 1963952761083648, guid: 2754a1a735285da4597848ca665be218, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4363705967564616, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5796,31 +5800,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.147327
+      value: 57.687325
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3431368
+      value: 0.053136826
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.81
+      value: 70.934
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.60051066
+      value: -0.6813591
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.6005103
+      value: 0.68135893
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.37334594
+      value: 0.18907672
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.373346
+      value: 0.18907645
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5832,7 +5836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4776572599474940, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 423.74
+      value: 328.981
       objectReference: {fileID: 0}
     - target: {fileID: 65864484786550620, guid: 2754a1a735285da4597848ca665be218, type: 3}
       propertyPath: m_IsTrigger
@@ -9948,7 +9952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &255874755
 Transform:
   m_ObjectHideFlags: 0
@@ -26341,7 +26345,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -27420,6 +27424,12 @@ MonoBehaviour:
   - {fileID: 1870586192}
   - {fileID: 1354598333}
   - {fileID: 1902078887}
+  lights:
+  - {fileID: 1373536158}
+  - {fileID: 1172677569}
+  - {fileID: 1889102250}
+  - {fileID: 673428693}
+  - {fileID: 1671141936}
 --- !u!1001 &724882818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29228,7 +29238,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Yard\u0131m isteyen 4 hayvan\u0131 bul"
+  m_Text: "Yard\u0131m isteyen 4 hayvan\u0131 bul ve d\xFCnyay\u0131 ayd\u0131nlat!"
 --- !u!222 &760740727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34087,31 +34097,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.15
+      value: 57.69
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.936
+      value: 71.06
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.35156885
+      value: 0.68951714
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.3515689
+      value: -0.6895172
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6135139
+      value: 0.1567357
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.61351395
+      value: 0.1567357
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -34123,7 +34133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1865603112017772760, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 120.371
+      value: 25.613
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dcfe46022b769a45b0b2b54898736af, type: 3}
@@ -51658,7 +51668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1354598334
 Transform:
   m_ObjectHideFlags: 0
@@ -62367,7 +62377,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Gaz\u0131 sand\u0131\u011Fa hapset"
+  m_Text: "Ba\u015Flang\u0131\xE7 noktas\u0131nda gaz\u0131 sand\u0131\u011Fa hapset"
 --- !u!222 &1633500329
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -72038,7 +72048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1902078888
 Transform:
   m_ObjectHideFlags: 0
