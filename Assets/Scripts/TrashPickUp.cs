@@ -13,6 +13,7 @@ public class TrashPickUp : MonoBehaviour
     private Animator _otherAnimator;
     public GameObject parentObject;
 
+
     private void Awake()
     {
         _otherAnimator = otherObject.GetComponent<Animator>();
