@@ -13,7 +13,7 @@ public class PlayerMovementInputController : MonoBehaviour
     public float aimValue;
     public float fireValue;
     public float speedDecreaser;
-    public bool canMove = false;
+    public static bool canMove = false;
     private Animator _animator;
 
     public Vector3 nextPosition;
@@ -24,6 +24,7 @@ public class PlayerMovementInputController : MonoBehaviour
 
     public float speed = 0.5f;
     public Camera playerCamera;
+
 
     private void Awake()
     {
@@ -45,12 +46,8 @@ public class PlayerMovementInputController : MonoBehaviour
 
     private void Update()
     {
+        StartCoroutine(WaitAnimation());
 
-        //check if player is standing
-        if (_animator.GetAnimatorTransitionInfo(0).IsName("standUp -> idle"))
-        {
-            canMove = true;
-        }
 
 
         #region Player Based Rotation
@@ -118,8 +115,20 @@ public class PlayerMovementInputController : MonoBehaviour
             //reset the y rotation of the look transform
             followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
         }
+
+
     }
 
+    IEnumerator WaitAnimation()
+    {
+        //check if player is standing
+        if (_animator.GetAnimatorTransitionInfo(0).IsName("standUp -> idle"))
+        {
+            yield return new WaitForSeconds(0.5f);
+            canMove = true;
+        }
 
+    }
 
 }
+
