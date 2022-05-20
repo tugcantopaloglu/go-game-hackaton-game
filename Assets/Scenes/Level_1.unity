@@ -24514,6 +24514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActive: 0
   otherObject: {fileID: 125388469}
+  parentObject: {fileID: 295202670}
 --- !u!65 &669070931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30887,6 +30888,7 @@ MonoBehaviour:
   aimValue: 0
   fireValue: 0
   speedDecreaser: 1
+  canMove: 0
   nextPosition: {x: 0, y: 0, z: 0}
   nextRotation: {x: 0, y: 0, z: 0, w: 0}
   rotationPower: 1
