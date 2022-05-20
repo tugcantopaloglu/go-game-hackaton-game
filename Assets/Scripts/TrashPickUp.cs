@@ -6,12 +6,14 @@ using UnityEngine.InputSystem;
 
 public class TrashPickUp : MonoBehaviour
 {
-    private bool mIsKneel;
+
     private Animator _animator;
     [SerializeField] private bool triggerActive = false;
     public GameObject otherObject;
     private Animator _otherAnimator;
     public GameObject parentObject;
+
+
 
 
     private void Awake()
@@ -39,14 +41,16 @@ public class TrashPickUp : MonoBehaviour
     {
         if (triggerActive && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            mIsKneel = true;
-            TriggerItem();
+            StartCoroutine(TriggerItem());
         }
     }
 
-    public void TriggerItem()
+    IEnumerator TriggerItem()
     {
         _otherAnimator.Play("kneel");
+        PlayerMovementInputController.canMove = false;
+        yield return new WaitForSeconds(2);
+        PlayerMovementInputController.canMove = true;
         parentObject.SetActive(false);
 
     }
