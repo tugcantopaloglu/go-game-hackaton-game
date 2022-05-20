@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class ItemTrigger : MonoBehaviour
 {
+    public static bool isQuest2Done = false;
     private bool mIsOpen;
     private Animator _animator;
     [SerializeField] private bool triggerActive = false;
@@ -50,6 +51,7 @@ public class ItemTrigger : MonoBehaviour
             _animator.SetBool("open", mIsOpen);
             tornado.SetActive(true);
             StartCoroutine(FogFadingCoroutine());
+            isQuest2Done = true;
 
         }
 
