@@ -9,6 +9,8 @@ public class ItemTrigger : MonoBehaviour
     private bool mIsOpen;
     private Animator _animator;
     [SerializeField] private bool triggerActive = false;
+
+    private int isBoxClosed = 0;
     private void Start()
     {
         _animator = GetComponentInParent<Animator>();
@@ -36,11 +38,23 @@ public class ItemTrigger : MonoBehaviour
         {
             mIsOpen = !mIsOpen;
             TriggerItem();
+            isBoxClosed += 1;
         }
     }
 
     public void TriggerItem()
     {
-        _animator.SetBool("open", mIsOpen);
+        if (isBoxClosed == 0)
+        {
+            _animator.SetBool("open", mIsOpen);
+
+        }
+        else if (isBoxClosed == 1)
+        {
+            _animator.SetBool("open", mIsOpen);
+            RenderSettings.fog = false;
+        }
+
+
     }
 }
