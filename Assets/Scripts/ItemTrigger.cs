@@ -62,7 +62,7 @@ public class ItemTrigger : MonoBehaviour
     {
         while (RenderSettings.fogDensity > 0f)
         {
-            RenderSettings.fogDensity -= 0.8f * Time.deltaTime;
+            RenderSettings.fogDensity -= 1f * Time.deltaTime;
             yield return new WaitForSeconds(0.5f);
         }
         tornado.SetActive(false);

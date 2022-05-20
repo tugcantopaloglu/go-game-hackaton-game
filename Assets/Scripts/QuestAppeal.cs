@@ -16,7 +16,7 @@ public class QuestAppeal : MonoBehaviour
 
         StartCoroutine(WaitForGameStart());
         RenderSettings.fog = false;
-        RenderSettings.fogDensity = 0f;
+        RenderSettings.fogDensity = 0.1f;
 
     }
     private void FixedUpdate()
@@ -31,7 +31,7 @@ public class QuestAppeal : MonoBehaviour
             buttons[1].transform.DOMoveX(1700, 1);
             questItems[1].SetActive(true);
             RenderSettings.fog = true;
-            RenderSettings.fogDensity = 0.1f;
+            
         }
         if (QuestTake.isQuest3Taken == true)
         {
