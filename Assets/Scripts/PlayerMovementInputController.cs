@@ -14,6 +14,8 @@ public class PlayerMovementInputController : MonoBehaviour
     public float aimValue;
     public float fireValue;
     public float speedDecreaser;
+    private bool canMove = false;
+    private Animator _animator;
 
     public Vector3 nextPosition;
     public Quaternion nextRotation;
@@ -22,11 +24,12 @@ public class PlayerMovementInputController : MonoBehaviour
     public float rotationLerp = 0.5f;
 
     public float speed = 0.5f;
-    public Camera camera;
+    public Camera playerCamera;
 
     private void Awake()
     {
         _agent = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
     }
 
     public void OnMove(InputValue value)
@@ -44,6 +47,13 @@ public class PlayerMovementInputController : MonoBehaviour
 
     private void Update()
     {
+
+        //check if player is standing
+        if(_animator.GetAnimatorTransitionInfo(0).IsName("standUp -> idle")){
+            canMove = true;
+        }
+
+
         #region Player Based Rotation
         
         //Move the player based on the X input on the controller
@@ -97,16 +107,19 @@ public class PlayerMovementInputController : MonoBehaviour
 
             return; 
         }
-        float moveSpeed = speed / 100f;
-        Vector3 position = (transform.forward * _move.y/ speedDecreaser * moveSpeed) + (transform.right * _move.x/ speedDecreaser * moveSpeed);
-        nextPosition = transform.position + position;        
-        
+        if(canMove == true){
+            float moveSpeed =  speed * Time.deltaTime;
+            Vector3 position = (transform.forward * _move.y/ speedDecreaser * moveSpeed) + (transform.right * _move.x/ speedDecreaser * moveSpeed);
+            nextPosition = transform.position + position;        
+            
 
-        //Set the player rotation based on the look transform
-        transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
-        //reset the y rotation of the look transform
-        followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
+            //Set the player rotation based on the look transform
+            transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
+            //reset the y rotation of the look transform
+            followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
+        }
     }
+    
 
 
 }
