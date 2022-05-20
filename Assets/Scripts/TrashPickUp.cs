@@ -4,14 +4,18 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class ItemTrigger : MonoBehaviour
+public class TrashPickUp : MonoBehaviour
 {
-    private bool mIsOpen;
+    private bool mIsKneel;
     private Animator _animator;
     [SerializeField] private bool triggerActive = false;
-    private void Start()
+    public GameObject otherObject;
+    private Animator _otherAnimator;
+    public GameObject parentObject;
+
+    private void Awake()
     {
-        _animator = GetComponentInParent<Animator>();
+        _otherAnimator = otherObject.GetComponent<Animator>();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -34,13 +38,15 @@ public class ItemTrigger : MonoBehaviour
     {
         if (triggerActive && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            mIsOpen = !mIsOpen;
+            mIsKneel = true;
             TriggerItem();
         }
     }
 
     public void TriggerItem()
     {
-        _animator.SetBool("open", mIsOpen);
+        _otherAnimator.Play("kneel");
+        parentObject.SetActive(false);
+
     }
 }
