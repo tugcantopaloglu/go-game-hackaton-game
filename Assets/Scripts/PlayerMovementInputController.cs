@@ -13,7 +13,7 @@ public class PlayerMovementInputController : MonoBehaviour
     public float aimValue;
     public float fireValue;
     public float speedDecreaser;
-    private bool canMove = false;
+    public bool canMove = false;
     private Animator _animator;
 
     public Vector3 nextPosition;
@@ -47,13 +47,14 @@ public class PlayerMovementInputController : MonoBehaviour
     {
 
         //check if player is standing
-        if(_animator.GetAnimatorTransitionInfo(0).IsName("standUp -> idle")){
+        if (_animator.GetAnimatorTransitionInfo(0).IsName("standUp -> idle"))
+        {
             canMove = true;
         }
 
 
         #region Player Based Rotation
-        
+
         //Move the player based on the X input on the controller
         //transform.rotation *= Quaternion.AngleAxis(_look.x * rotationPower, Vector3.up);
 
@@ -79,7 +80,7 @@ public class PlayerMovementInputController : MonoBehaviour
         {
             angles.x = 340;
         }
-        else if(angle < 180 && angle > 40)
+        else if (angle < 180 && angle > 40)
         {
             angles.x = 40;
         }
@@ -88,11 +89,11 @@ public class PlayerMovementInputController : MonoBehaviour
         followTransform.transform.localEulerAngles = angles;
         #endregion
 
-        
+
         nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationLerp);
 
-        if (_move.x == 0 && _move.y == 0) 
-        {   
+        if (_move.x == 0 && _move.y == 0)
+        {
             nextPosition = transform.position;
 
             if (aimValue == 1)
@@ -103,13 +104,14 @@ public class PlayerMovementInputController : MonoBehaviour
                 followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
             }
 
-            return; 
+            return;
         }
-        if(canMove == true){
-            float moveSpeed =  speed * Time.deltaTime;
-            Vector3 position = (transform.forward * _move.y/ speedDecreaser * moveSpeed) + (transform.right * _move.x/ speedDecreaser * moveSpeed);
-            nextPosition = transform.position + position;        
-            
+        if (canMove == true)
+        {
+            float moveSpeed = speed * Time.deltaTime;
+            Vector3 position = (transform.forward * _move.y / speedDecreaser * moveSpeed) + (transform.right * _move.x / speedDecreaser * moveSpeed);
+            nextPosition = transform.position + position;
+
 
             //Set the player rotation based on the look transform
             transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
@@ -117,7 +119,7 @@ public class PlayerMovementInputController : MonoBehaviour
             followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
         }
     }
-    
+
 
 
 }
