@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 23139643947140802}
   - component: {fileID: 65864484786550620}
   - component: {fileID: 95157066711674308}
-  - component: {fileID: 114343782324975006}
   m_Layer: 0
   m_Name: crate
   m_TagString: Untagged
@@ -203,19 +202,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114343782324975006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963952761083648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4feb19f027d35d4a8896d4108816f78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  Image: {fileID: 0}
-  InteractText: "A\xE7mak i\xE7in F'ye bas\u0131n"
-  ItemType: 0
