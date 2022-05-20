@@ -108,7 +108,7 @@ public class PlayerMovementInputController : MonoBehaviour
             return; 
         }
         if(canMove == true){
-            float moveSpeed = speed / 100f;
+            float moveSpeed =  speed * Time.deltaTime;
             Vector3 position = (transform.forward * _move.y/ speedDecreaser * moveSpeed) + (transform.right * _move.x/ speedDecreaser * moveSpeed);
             nextPosition = transform.position + position;        
             
