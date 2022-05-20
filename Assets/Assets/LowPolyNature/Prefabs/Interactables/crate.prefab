@@ -217,5 +217,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Image: {fileID: 0}
-  InteractText: Press F to open
+  InteractText: "A\xE7mak i\xE7in F'ye bas\u0131n"
   ItemType: 0
