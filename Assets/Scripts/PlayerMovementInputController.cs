@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(NavMeshAgent))] */
 public class PlayerMovementInputController : MonoBehaviour
 {
-    private NavMeshAgent _agent;
     public Vector2 _move;
     public Vector2 _look;
     public float aimValue;
@@ -28,7 +27,6 @@ public class PlayerMovementInputController : MonoBehaviour
 
     private void Awake()
     {
-        _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
 
