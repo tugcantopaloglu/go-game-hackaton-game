@@ -30674,7 +30674,7 @@ MonoBehaviour:
   nextRotation: {x: 0, y: 0, z: 0, w: 0}
   rotationPower: 1
   rotationLerp: 2
-  speed: 6
+  speed: 5
   playerCamera: {fileID: 0}
   followTransform: {fileID: 539834735}
 --- !u!114 &855897113
