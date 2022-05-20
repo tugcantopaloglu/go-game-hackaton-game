@@ -8,10 +8,10 @@ public class Crate : InteractableItemBase {
 
     public override void OnInteract()
     {
-        InteractText = "Press F to ";
+        InteractText = "F'ye basın ";
 
         mIsOpen = !mIsOpen;
-        InteractText += mIsOpen ? "to close" : "to open";
+        InteractText += mIsOpen ? "kapamak için" : "açmak için";
 
         GetComponent<Animator>().SetBool("open", mIsOpen);
     }
