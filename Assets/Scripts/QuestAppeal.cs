@@ -76,7 +76,7 @@ public class QuestAppeal : MonoBehaviour
         }
 
         if(isGameOver == true){
-            SceneManager.LoadScene("Cutscene");
+            StartCoroutine(WaitForGameEnd());
         }
 
 
@@ -87,6 +87,11 @@ public class QuestAppeal : MonoBehaviour
         yield return new WaitForSeconds(3);
         buttons[4].transform.DOMoveX(220, 1);
 
+    }
+
+    IEnumerator WaitForGameEnd(){
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Cutscene");
     }
 
 }
