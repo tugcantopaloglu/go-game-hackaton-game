@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class QuestAppeal : MonoBehaviour
 {
@@ -73,6 +74,11 @@ public class QuestAppeal : MonoBehaviour
             lights[4].SetActive(true);
             isGameOver = true;
         }
+
+        if(isGameOver == true){
+            SceneManager.LoadScene("Cutscene");
+        }
+
 
     }
 
