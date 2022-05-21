@@ -58,7 +58,7 @@ public class TrashPickUp : MonoBehaviour
             else if (parentObject.CompareTag("Quest3"))
             {
                 quest3Counter += 1;
-                if (quest1Counter == 5)
+                if (quest3Counter == 5)
                 {
                     isQuest3Done = true;
 
@@ -67,7 +67,7 @@ public class TrashPickUp : MonoBehaviour
             else if (parentObject.CompareTag("Quest4"))
             {
                 quest4Counter += 1;
-                if (quest1Counter == 4)
+                if (quest4Counter == 4)
                 {
                     isQuest4Done = true;
                 }
