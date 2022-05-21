@@ -50,22 +50,22 @@ public class QuestAppeal : MonoBehaviour
 
         if (TrashPickUp.isQuest1Done == true)
         {
-            buttons[0].transform.DOMoveX(-1700, 1);
+            buttons[0].transform.DOMoveX(2500, 1);
             lights[3].SetActive(true);
         }
         if (ItemTrigger.isQuest2Done == true)
         {
-            buttons[1].transform.DOMoveX(-1700, 1);
+            buttons[1].transform.DOMoveX(2500, 1);
             lights[2].SetActive(true);
         }
         if (TrashPickUp.isQuest3Done == true)
         {
-            buttons[2].transform.DOMoveX(-1700, 1);
+            buttons[2].transform.DOMoveX(2500, 1);
             lights[1].SetActive(true);
         }
         if (TrashPickUp.isQuest4Done == true)
         {
-            buttons[3].transform.DOMoveX(-1700, 1);
+            buttons[3].transform.DOMoveX(2500, 1);
             lights[0].SetActive(true);
         }
         if (TrashPickUp.isQuest1Done == true && ItemTrigger.isQuest2Done == true && TrashPickUp.isQuest3Done == true && TrashPickUp.isQuest4Done == true)
